@@ -20,6 +20,10 @@ número de documento de la persona.
 
 
 class Persona:
+    """ Crea un objeto de tipo persona, con los atributos nombre,
+        apellido, edad, profesion. Debe inicializarse con un número
+        de documento """
+
     nombre = 'Default'
     apellido = 'Default'
     profesion = 'Default'

@@ -9,6 +9,8 @@ otro método que permita mostrar el estado del alumno según la calificación pr
 promocionado)."""
 
 class Alumno:
+    """Objeto de tipo Alumno, debe inicializarse con número de legajo, 
+    además de tres notas parciales"""
     def __init__(self, nlegajo, n1, n2, n3):
         self.nlegajo = nlegajo
         self.notas_parciales = (n1, n2, n3)
