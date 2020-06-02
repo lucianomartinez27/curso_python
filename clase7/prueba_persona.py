@@ -3,8 +3,15 @@
 
 from persona import Persona
 
-persona1 = Persona('Alexis', 'Sostersich', 'Programador', 32)
+persona1 = Persona(38262759)
+
+persona1.nombre = 'Luciano'
+persona1.apellido = 'Martinez'
+persona1.profesion = 'Apicultor'
+persona1.edad = 25
 
 print(persona1)
 
 persona1.mayor_de_edad()
+
+persona1.ver_dni()
