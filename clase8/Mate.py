@@ -33,7 +33,7 @@ class Mate:
 
     def __str__(self):
         """Muestra el estado del mate"""
-        return 'Te quedan {} cebadas y el mate está {estado}'.format(self.cebadas_disponibles, estado =('lleno' if self.lleno else 'vacio'))
+        return 'Te quedan {} cebadas y el mate está {}'.format(self.cebadas_disponibles, ('lleno' if self.lleno else 'vacio'))
 
     def __eq__(self, otro_mate):
         return self.cebadas_disponibles == otro_mate.cebadas_disponibles \
