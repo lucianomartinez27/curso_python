@@ -1,17 +1,22 @@
 #! /usr/bin/env/ python3
 # -*- coding: utf-8 -*-
 
-class Mate:
+from Bombilla import Bombilla
+from Yerba import Yerba
+
+class Mate(Yerba, Bombilla):
     """El objeto de tipo mate describe las características como también
     el funcionamiento de la infusión rioplatense"""
 
-    def __init__(self, n):
+    def __init__(self, n, tipo ='sin palo', material ='alpaca'):
+        Bombilla().__init__(material)
+        Yerba().__init__(tipo)
         self.cebadas_disponibles = n
         self.lleno = False
     
     def cebar(self):
         if self.lleno:
-            print('¡Cuidado! ¡Te quemaste!')
+            raise('¡Cuidado! ¡Te quemaste!')
         else:
             self.lleno = True
             print('Cebando')
@@ -19,13 +24,13 @@ class Mate:
     def beber(self):
         if self.lleno:
             if self.cebadas_disponibles == 0:
-                print('Advertencua: El mate está lavado')
+                raise('Advertencua: El mate está lavado')
             else:
                 self.lleno = False
                 self.cebadas_disponibles -= 1
                 print('Qué rico mate')
         else:
-            print('El mate está vacío!')
+            raise('El mate está vacío!')
 
     def arreglar(self, cebadas_adicionales):
         """ Agrega a las cebadas disponibles la cantidad que se pase como parámetro"""
